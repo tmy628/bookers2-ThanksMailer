@@ -5,9 +5,9 @@ class ThanksMailer < ApplicationMailer
   #
   #   en.thanks_mailer.send_when_signup.subject
   #
-  def send_when_signup
-    @greeting = "Hi"
+  def send_when_signup(email, name)
+    @name = name
 
-    mail to: "to@example.org"
+    mail to: email, subject: 'Registration Complete! Thanks for Joining!'
   end
 end
